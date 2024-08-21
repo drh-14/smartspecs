@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { FC } from 'react';
 import { useRouter } from 'next/navigation';
@@ -7,41 +7,35 @@ const Navbar: FC = () => {
 	const router = useRouter();
 
 	return (
-		<nav>
-		<ul>
+		<nav className="bg-gray-800 text-white p-4">
+		<ul className="flex justify-between items-center">
 			<li>
-			<a onClick={() => router.push('/')}>SmartSpecs</a>
+			<a
+				onClick={() => router.push('/')}
+				className="hover:underline cursor-pointer"
+			>
+				SmartSpecs
+			</a>
+			</li>
+			<div className="flex space-x-4">
+			<li>
+				<a
+				onClick={() => router.push('/login')}
+				className="hover:underline cursor-pointer"
+				>
+				Login
+				</a>
 			</li>
 			<li>
-			<a onClick={() => router.push('/login')}>Login</a>
+				<a
+				onClick={() => router.push('/register')}
+				className="hover:underline cursor-pointer"
+				>
+				Register
+				</a>
 			</li>
-			<li>
-			<a onClick={() => router.push('/register')}>Register</a>
-			</li>
+			</div>
 		</ul>
-		<style jsx>{`
-			nav {
-			background: #333;
-			color: #fff;
-			padding: 1rem;
-			}
-			ul {
-			list-style: none;
-			display: flex;
-			gap: 1rem;
-			}
-			li {
-			margin: 0;
-			}
-			a {
-			color: #fff;
-			text-decoration: none;
-			cursor: pointer;
-			}
-			a:hover {
-			text-decoration: underline;
-			}
-		`}</style>
 		</nav>
 	);
 };
