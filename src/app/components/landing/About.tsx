@@ -8,7 +8,7 @@ const About: FC = () => {
 		<h1 className="text-5xl font-bold mb-4">SmartSpecs</h1>
 		<p className="text-xl mb-8">Build Your PC</p>
 		<button className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
-			Get Started
+			Start Building
 		</button>
 		</main>
 	);
