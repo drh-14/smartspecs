@@ -4,16 +4,9 @@ import { FC } from 'react';
 
 const Landing: FC = () => {
 	return (
-		<main style={{ 
-		display: 'flex', 
-		flexDirection: 'column',
-		justifyContent: 'center', 
-		alignItems: 'center', 
-		height: '100vh', 
-		textAlign: 'center' 
-		}}>
-		<h1>SmartSpecs</h1>
-		<p>This is the about page content.</p>
+		<main className="flex flex-col items-center text-center p-30 mt-60">
+			<h1 className="text-5xl font-bold mb-4">SmartSpecs</h1>
+			<p className="text-xl">Build Your PC</p>
 		</main>
 	);
 };
