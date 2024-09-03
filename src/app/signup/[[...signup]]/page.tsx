@@ -14,7 +14,7 @@ export default function SignUpPage() {
 				SmartSpecs
 			</Typography>
 			<Button color="inherit">
-				<Link href="/sign-in" passHref>
+				<Link href="/signin" passHref>
 				<Typography component="span" sx={{ color: 'inherit', textDecoration: 'none' }}>
 					Sign In
 				</Typography>

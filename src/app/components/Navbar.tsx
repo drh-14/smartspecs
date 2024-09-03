@@ -20,7 +20,7 @@ const Navbar: FC = () => {
 				<div className="flex space-x-6">
 					<li>
 						<a
-							onClick={() => router.push('/login')}
+							onClick={() => router.push('/signin')}
 							className="hover:underline cursor-pointer"
 						>
 							Login
