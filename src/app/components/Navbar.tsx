@@ -2,6 +2,7 @@
 
 import { FC } from 'react';
 import { useRouter } from 'next/navigation';
+import { SignedIn, SignedOut, SignIn, UserButton, UserProfile } from '@clerk/nextjs';
 
 const Navbar: FC = () => {
 	const router = useRouter();
@@ -9,6 +10,7 @@ const Navbar: FC = () => {
 	return (
 		<nav className="bg-gray-800 text-white p-6 text-lg">
 			<ul className="flex justify-between items-center">
+				<SignedOut>
 				<li>
 					<a
 						onClick={() => router.push('/')}
@@ -35,6 +37,10 @@ const Navbar: FC = () => {
 						</a>
 					</li>
 				</div>
+				</SignedOut>
+				<SignedIn>
+					<UserButton/>
+				</SignedIn>
 			</ul>
 		</nav>
 	);
