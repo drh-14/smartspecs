@@ -39,7 +39,9 @@ const Navbar: FC = () => {
 				</div>
 				</SignedOut>
 				<SignedIn>
-					<UserButton/>
+					<div className='ml-auto'>
+						<UserButton/>
+					</div>
 				</SignedIn>
 			</ul>
 		</nav>
