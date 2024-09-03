@@ -28,7 +28,7 @@ const Navbar: FC = () => {
 					</li>
 					<li>
 						<a
-							onClick={() => router.push('/register')}
+							onClick={() => router.push('/signup')}
 							className="hover:underline cursor-pointer"
 						>
 							Register
