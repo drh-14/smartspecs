@@ -2,33 +2,31 @@
 
 import Navbar from './components/Navbar';
 import About from './components/landing/About';
-import {db} from '../../firebase';
+import { db } from '../../firebase';
 import { setDoc, doc, addDoc, collection } from "firebase/firestore";
 import { useUser } from '@clerk/nextjs';
 import { useEffect } from 'react';
 
 
 export default function Home() {
-  const currentUser = useUser();
+	const currentUser = useUser();
 
 	useEffect(() => {
-		createUserColletion();
+		createUserCollection();
 	}, [currentUser]);
 
-	const createUserColletion = async () => {
-
+	const createUserCollection = async () => {
 		if (currentUser && currentUser.user) {
-			console.log(currentUser)
 			await setDoc(doc(db, "users", currentUser.user.id), {
 				computers: [],
 			});
 		}
 	}
 
-  return (
-    <>
-      <Navbar />
-      <About />
-    </>
-  );
+	return (
+		<>
+			<Navbar />
+			<About />
+		</>
+	);
 }
