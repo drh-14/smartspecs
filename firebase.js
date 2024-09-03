@@ -5,7 +5,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_KEY,
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_KEY,
   authDomain: "smartspecs-5dd21.firebaseapp.com",
   projectId: "smartspecs-5dd21",
   storageBucket: "smartspecs-5dd21.appspot.com",
