@@ -2,6 +2,7 @@
 
 import { FC } from 'react';
 import { useRouter } from 'next/navigation';
+import { SignedIn, SignedOut, SignIn, UserButton, UserProfile } from '@clerk/nextjs';
 
 const Navbar: FC = () => {
 	const router = useRouter();
@@ -9,6 +10,7 @@ const Navbar: FC = () => {
 	return (
 		<nav className="bg-gray-800 text-white p-6 text-lg">
 			<ul className="flex justify-between items-center">
+				<SignedOut>
 				<li>
 					<a
 						onClick={() => router.push('/')}
@@ -20,7 +22,7 @@ const Navbar: FC = () => {
 				<div className="flex space-x-6">
 					<li>
 						<a
-							onClick={() => router.push('/login')}
+							onClick={() => router.push('/signin')}
 							className="hover:underline cursor-pointer"
 						>
 							Login
@@ -28,13 +30,19 @@ const Navbar: FC = () => {
 					</li>
 					<li>
 						<a
-							onClick={() => router.push('/register')}
+							onClick={() => router.push('/signup')}
 							className="hover:underline cursor-pointer"
 						>
 							Register
 						</a>
 					</li>
 				</div>
+				</SignedOut>
+				<SignedIn>
+					<div className='ml-auto'>
+						<UserButton/>
+					</div>
+				</SignedIn>
 			</ul>
 		</nav>
 	);
